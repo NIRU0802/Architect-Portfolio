@@ -56,8 +56,8 @@ export const projects = [
     title: "Premium Office Design",
     category: "Corporate Space",
     location: "Bangalore, India",
-    image: "/images/projects/project-4.jpg",
-    heroImage: "/images/projects/project-4.jpg",
+    image: "/images/projects/project-5.jpg",
+    heroImage: "/images/projects/project-5.jpg",
     description:
       "A premium corporate office that balances brand identity with employee wellbeing.",
     challenge:
