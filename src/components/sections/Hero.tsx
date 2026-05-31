@@ -1,6 +1,7 @@
 // components/sections/Hero.tsx  — fixed FadeUp usage (mount animation, not scroll)
 "use client";
 
+import Link from "next/link";
 import { useRef } from "react";
 import FadeUp from "@/components/motion/FadeUp";
 import ScrollIndicator from "@/components/ui/ScrollIndicator";
@@ -51,15 +52,24 @@ export default function Hero() {
           </FadeUp>
 
           <FadeUp delay={0.8}>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <button className="rounded-full bg-black px-8 py-4 text-white transition-all duration-300 hover:-translate-y-1">
-                View Projects
-              </button>
-              <button className="rounded-full border border-black px-8 py-4 transition-all duration-300 hover:bg-black hover:text-white">
-                Our Process
-              </button>
-            </div>
-          </FadeUp>
+  <div className="mt-10 flex flex-wrap gap-4">
+    
+    {/* View Projects */}
+    <Link href="/projects">
+      <button className="rounded-full bg-black px-8 py-4 text-white transition-all duration-300 hover:-translate-y-1">
+        View Projects
+      </button>
+    </Link>
+
+    {/* Our Process → (you probably want /about or /process) */}
+    <Link href="/about">
+      <button className="rounded-full border border-black px-8 py-4 transition-all duration-300 hover:bg-black hover:text-white">
+        Our Process
+      </button>
+    </Link>
+
+  </div>
+</FadeUp>
 
           <FadeUp delay={1}>
             <div className="mt-16 grid max-w-lg grid-cols-3 gap-8">
